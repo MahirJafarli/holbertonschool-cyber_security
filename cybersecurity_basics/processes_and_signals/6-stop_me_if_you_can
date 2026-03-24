@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# This script stops the process without using the 'kill' command
+pkill -f 4-to_infinity_and_beyond

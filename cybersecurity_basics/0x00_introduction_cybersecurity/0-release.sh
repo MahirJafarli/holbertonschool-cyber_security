@@ -1,1 +1,1 @@
-lsb_release -si
+grep -w "ID" /etc/os-release | cut -d= -f2

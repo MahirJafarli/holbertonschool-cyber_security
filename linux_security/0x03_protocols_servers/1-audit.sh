@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -E "^[^#]" /etc/ssh/sshd_config
+sshd -T | grep -iwFf <(grep -E "^[^#]" /etc/ssh/sshd_config | awk '{print $1}')

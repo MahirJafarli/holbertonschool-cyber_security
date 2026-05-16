@@ -1,2 +1,2 @@
 #!/bin/bash
-find / -type d -perm -0002 -print 2>/dev/null | xargs chmod o-w 2>/dev/null
+iptables -F && iptables -P INPUT DROP && iptables -P FORWARD DROP && iptables -P OUTPUT ACCEPT && iptables -A INPUT -i lo -j ACCEPT && iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT && iptables -A INPUT -p tcp --dport 22 -j ACCEPT

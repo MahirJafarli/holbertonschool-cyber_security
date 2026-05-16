@@ -1,2 +1,2 @@
 #!/bin/bash
-find / -type d -perm -0002 -print -exec chmod 775 {} \; 2>/dev/null
+find /home /var/www -type d -perm -0002 -print -exec chmod 755 {} \; 2>/dev/null

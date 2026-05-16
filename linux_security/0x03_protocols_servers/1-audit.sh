@@ -1,2 +1,2 @@
 #!/bin/bash
-sshd -T | grep -iwFf <(grep -E "^[^#]" /etc/ssh/sshd_config | awk '{print $1}')
+grep -v '^[[:space:]]*#' /etc/ssh/sshd_config | grep -v '^[[:space:]]*$'

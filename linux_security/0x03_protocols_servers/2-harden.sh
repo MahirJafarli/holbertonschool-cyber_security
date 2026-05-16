@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type d -perm -0002 -print -exec chmod 755 {} \; 2>/dev/null
+find / -type d -perm -0002 2>/dev/null | grep -E "^/(home|var)" | xargs -I {} chmod 755 {}

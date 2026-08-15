@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -oP '\b[a-zA-Z_]+(?=\[\d+\]:)' $1 | sort | uniq -c | sort -nr
+grep -oP '(?<=:\s)\w+' ${1:-auth.log} | sort | uniq -c | sort -nr

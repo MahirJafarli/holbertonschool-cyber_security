@@ -1,2 +1,2 @@
 #!/bin/bash
-grep "Failed" ${1:-auth.log} | grep -oP '\b(?:\d{1,3}\.){3}\d{1,3}\b' | sort -u | wc -l
+grep "Invalid user" ${1:-auth.log} | grep -oP '\b(?:\d{1,3}\.){3}\d{1,3}\b' | sort -u | wc -l

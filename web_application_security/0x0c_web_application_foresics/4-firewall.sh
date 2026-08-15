@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -iE "iptables|ufw" ${1:-auth.log} | grep -iE "add|insert|COMMAND=" | wc -l
+grep "iptables" auth.log | grep "INPUT" | wc -l
